@@ -1,0 +1,78 @@
+body {
+    background: #63174A;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.feedback-form {
+    background: #f7efdf;
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(44, 14, 64, 0.37);
+}
+
+h1 {
+    text-align: center;
+    color: #63174A;
+    font-family: 'Brush Script MT', cursive;
+    margin-bottom: 5px;
+}
+
+.subheading {
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 18px;
+    color: #7b4a69;
+}
+
+.section {
+    margin-bottom: 18px;
+}
+
+.section label {
+    display: block;
+    color: #63174A;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.emoji-group label {
+    display: inline-block;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+.emoji-group span {
+    font-size: 30px;
+}
+
+textarea, input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #b087a7;
+    margin-top: 5px;
+    font-size: 15px;
+    background: #fbf7f1;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background: #7B4A69;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: #A86E89;
+}
