@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="file2.css">
+</head>
+<body>
+    <div class="feedback-form">
+        <h1>Feedback form</h1>
+        <p class="subheading">Feedback is the mirror that reflects our blind spot. Please guide us to refine and elevate ourselves</p>
+        
+        <form action="https://formspree.io/f/myzadyvw" method="POST">
+            <div class="section">
+                <label>Service:</label>
+                <div class="emoji-group">
+                    <label><input type="radio" name="service" value="excellent"><span>😊</span></label>
+                    <label><input type="radio" name="service" value="good"><span>🙂</span></label>
+                    <label><input type="radio" name="service" value="average"><span>😐</span></label>
+                    <label><input type="radio" name="service" value="poor"><span>😕</span></label>
+                    <label><input type="radio" name="service" value="bad"><span>😡</span></label>
+                </div>
+            </div>
+
+            <div class="section">
+                <label>Food:</label>
+                <div class="emoji-group">
+                    <label><input type="radio" name="food" value="excellent"><span>😊</span></label>
+                    <label><input type="radio" name="food" value="good"><span>🙂</span></label>
+                    <label><input type="radio" name="food" value="average"><span>😐</span></label>
+                    <label><input type="radio" name="food" value="poor"><span>😕</span></label>
+                    <label><input type="radio" name="food" value="bad"><span>😡</span></label>
+                </div>
+            </div>
+
+            <div class="section">
+                <label>Ambience:</label>
+                <div class="emoji-group">
+                    <label><input type="radio" name="ambience" value="excellent"><span>😊</span></label>
+                    <label><input type="radio" name="ambience" value="good"><span>🙂</span></label>
+                    <label><input type="radio" name="ambience" value="average"><span>😐</span></label>
+                    <label><input type="radio" name="ambience" value="poor"><span>😕</span></label>
+                    <label><input type="radio" name="ambience" value="bad"><span>😡</span></label>
+                </div>
+            </div>
+
+            <div class="section">
+                <label>Overall Experience:</label>
+                <div class="emoji-group">
+                    <label><input type="radio" name="overall" value="excellent"><span>😊</span></label>
+                    <label><input type="radio" name="overall" value="good"><span>🙂</span></label>
+                    <label><input type="radio" name="overall" value="average"><span>😐</span></label>
+                    <label><input type="radio" name="overall" value="poor"><span>😕</span></label>
+                    <label><input type="radio" name="overall" value="bad"><span>😡</span></label>
+                </div>
+            </div>
+
+            <div class="section">
+                <label for="comments">Other Comments:</label>
+                <textarea name="comments" id="comments" rows="4" placeholder="Write your comments here..."></textarea>
+            </div>
+
+            <div class="section">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name...">
+            </div>
+            
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
