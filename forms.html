@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Feedback Form</title>
+  <style>
+    .rating {
+      display: flex;
+      justify-content: space-around;
+    }
+    .rating input {
+      display: none;
+    }
+    .rating label {
+      font-size: 30px;
+      cursor: pointer;
+    }
+    .rating label:before {
+      content: "\2605";
+    }
+    .rating input:checked ~ label {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Feedback form</h1>
+  <p>Feedback is the mirror that reflects our blind spot. Please guide us to refine and elevate ourselves.</p>
+  <form action="https:                                         
+    <h2>Rating:</h2>
+    <h3>Service:</h3>
+    <div class="rating">
+      <input id="service-1" type="radio" name="service" value="1"><label for="service-1"></label>
+      <input id="service-2" type="radio" name="service" value="2"><label for="service-2"></label>
+      <input id="service-3" type="radio" name="service" value="3"><label for="service-3"></label>
+      <input id="service-4" type="radio" name="service" value="4"><label for="service-4"></label>
+      <input id="service-5" type="radio" name="service" value="5"><label for="service-5"></label>
+    </div>
+    <h3>Food:</h3>
+    <div class="rating">
+      <input id="food-1" type="radio" name="food" value="1"><label for="food-1"></label>
+      <input id="food-2" type="radio" name="food" value="2"><label for="food-2"></label>
+      <input id="food-3" type="radio" name="food" value="3"><label for="food-3"></label>
+      <input id="food-4" type="radio" name="food" value="4"><label for="food-4"></label>
+      <input id="food-5" type="radio" name="food" value="5"><label for="food-5"></label>
+    </div>
+    <h3>Ambience:</h3>
+    <div class="rating">
+      <input id="ambience-1" type="radio" name="ambience" value="1"><label for="ambience-1"></label>
+      <input id="ambience-2" type="radio" name="ambience" value="2"><label for="ambience-2"></label>
+      <input id="ambience-3" type="radio" name="ambience" value="3"><label for="ambience-3"></label>
+      <input id="ambience-4" type="radio" name="ambience" value="4"><label for="ambience-4"></label>
+      <input id="ambience-5" type="radio" name="ambience" value="5"><label for="ambience-5"></label>
+    </div>
+    <h3>Overall Experience:</h3>
+    <div class="rating">
+      <input id="experience-1" type="radio" name="experience" value="1"><label for="experience-1"></label>
+      <input id="experience-2" type="radio" name="experience" value="2"><label for="experience-2"></label>
+      <input id="experience-3" type="radio" name="experience" value="3"><label for="experience-3"></label>
+      <input id="experience-4" type="radio" name="experience" value="4"><label for="experience-4"></label>
+      <input id="experience-5" type="radio" name="experience" value="5"><label for="experience-5"></label>
+    </div>
+    <h3>Other Comments:</h3>
+    <textarea name="comments"></textarea>
+    <h3>Name:</h3>
+    <input type="text" name="name">
+    <button type="submit">Submit Feedback</button>
+  </form>
+</body>
+</html>
+
+*Backend Setup (Formspree):*
+1. Go to https://formspree.io/ and create an account.
+2. Set up a new form with your email address.
+3. Copy the form's endpoint and replace `YOUR_EMAIL` in the HTML code with it.
+
+Note: This code is simplified and does not include any validation or error handling. You should add these features to a real application.
+[25/11, 13:22] Meta AI: Here's a basic example of how you could implement this feedback form using HTML for the frontend and Formspree for the backend.
+
+*Frontend Code (HTML):*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Feedback Form</title>
+  <style>
+    .rating {
+      display: flex;
+      justify-content: space-around;
+    }
+    .rating input {
+      display: none;
+    }
+    .rating label {
+      font-size: 30px;
+      cursor: pointer;
+    }
+    .rating label:before {
+      content: "\2605";
+    }
+    .rating input:checked ~ label {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Feedback form</h1>
+  <p>Feedback is the mirror that reflects our blind spot. Please guide us to refine and elevate ourselves.</p>
+  <form action="https:                                         
+    <h2>Rating:</h2>
+    <h3>Service:</h3>
+    <div class="rating">
+      <input id="service-1" type="radio" name="service" value="1"><label for="service-1"></label>
+      <input id="service-2" type="radio" name="service" value="2"><label for="service-2"></label>
+      <input id="service-3" type="radio" name="service" value="3"><label for="service-3"></label>
+      <input id="service-4" type="radio" name="service" value="4"><label for="service-4"></label>
+      <input id="service-5" type="radio" name="service" value="5"><label for="service-5"></label>
+    </div>
+    <h3>Food:</h3>
+    <div class="rating">
+      <input id="food-1" type="radio" name="food" value="1"><label for="food-1"></label>
+      <input id="food-2" type="radio" name="food" value="2"><label for="food-2"></label>
+      <input id="food-3" type="radio" name="food" value="3"><label for="food-3"></label>
+      <input id="food-4" type="radio" name="food" value="4"><label for="food-4"></label>
+      <input id="food-5" type="radio" name="food" value="5"><label for="food-5"></label>
+    </div>
+    <h3>Ambience:</h3>
+    <div class="rating">
+      <input id="ambience-1" type="radio" name="ambience" value="1"><label for="ambience-1"></label>
+      <input id="ambience-2" type="radio" name="ambience" value="2"><label for="ambience-2"></label>
+      <input id="ambience-3" type="radio" name="ambience" value="3"><label for="ambience-3"></label>
+      <input id="ambience-4" type="radio" name="ambience" value="4"><label for="ambience-4"></label>
+      <input id="ambience-5" type="radio" name="ambience" value="5"><label for="ambience-5"></label>
+    </div>
+    <h3>Overall Experience:</h3>
+    <div class="rating">
+      <input id="experience-1" type="radio" name="experience" value="1"><label for="experience-1"></label>
+      <input id="experience-2" type="radio" name="experience" value="2"><label for="experience-2"></label>
+      <input id="experience-3" type="radio" name="experience" value="3"><label for="experience-3"></label>
+      <input id="experience-4" type="radio" name="experience" value="4"><label for="experience-4"></label>
+      <input id="experience-5" type="radio" name="experience" value="5"><label for="experience-5"></label>
+    </div>
+    <h3>Other Comments:</h3>
+    <textarea name="comments"></textarea>
+    <h3>Name:</h3>
+    <input type="text" name="name">
+    <button type="submit">Submit Feedback</button>
+  </form>
+</body>
+</html>
+

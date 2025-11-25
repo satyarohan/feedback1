@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="file2.css">
+  <title>Save Feedback Locally</title>
+  <script>
+    function saveFeedback(event) {
+      event.preventDefault();
+      const service = document.querySelector('input[name="service"]:checked')?.value || "";
+      const food = document.querySelector('input[name="food"]:checked')?.value || "";
+      const ambience = document.querySelector('input[name="ambience"]:checked')?.value || "";
+      const overall = document.querySelector('input[name="overall"]:checked')?.value || "";
+      const comments = document.getElementById('comments').value || "";
+      const name = document.getElementById('name').value || "";
+      
+      const csv = `Service,Food,Ambience,Overall,Comments,Name
+${service},${food},${ambience},${overall},${comments},${name}
+`;
+      const blob = new Blob([csv], {type: 'text/csv'});
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'feedback.csv';
+      link.click();
+    }
+  </script>
+</head>
+<body>
+<form onsubmit="saveFeedback(event)">
+  <label>Service: <br><br> <input type="radio" name="service" value="😊">😊 <input type="radio" name="service" value="🙂">🙂 <input type="radio" name="service" value="😐">😐 <input type="radio" name="service" value="😕">😕 <input type="radio" name="service" value="😡">😡</label>
+  <br>
+  <label>Food: <br><br><input type="radio" name="food" value="😊">😊 <input type="radio" name="food" value="🙂">🙂 <input type="radio" name="food" value="😐">😐 <input type="radio" name="food" value="😕">😕 <input type="radio" name="food" value="😡">😡</label>
+  <br>
+  <label>Ambience: <br><br><input type="radio" name="ambience" value="😊">😊 <input type="radio" name="ambience" value="🙂">🙂 <input type="radio" name="ambience" value="😐">😐 <input type="radio" name="ambience" value="😕">😕 <input type="radio" name="ambience" value="😡">😡</label>
+  <br>
+  <label>Overall Experience: <br<br><input type="radio" name="overall" value="😊">😊 <input type="radio" name="overall" value="🙂">🙂 <input type="radio" name="overall" value="😐">😐 <input type="radio" name="overall" value="😕">😕 <input type="radio" name="overall" value="😡">😡</label>
+  <br>
+  <textarea id="comments" placeholder="Other Comments"></textarea>
+  <br>
+  <input type="text" id="name" placeholder="Name">
+  <br>
+  <button type="submit">Save Feedback to Device</button>
+</form>
+</body>
+</html>
